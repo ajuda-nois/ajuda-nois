@@ -1,0 +1,34 @@
+{
+  "projectName": "ajuda-nois",
+  "projectOwner": "miglsoares",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "kvnol",
+      "name": "Kevin Oliveira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3299130?v=4",
+      "profile": "https://kevinoliveira.com.br/",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "eptaccio",
+      "name": "Marcos Florencio",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5944629?v=4",
+      "profile": "https://eptaccio.dev/",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
