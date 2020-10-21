@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const { Schema } = mongoose
+import mongoose, { Schema } from 'mongoose'
 
 const MentoreSchema = Schema({
   nome: {
@@ -8,15 +7,15 @@ const MentoreSchema = Schema({
   },
   areasDeEstudo: {
     require: true,
-    type: [ String ]
+    type: [String]
   },
   especialidades: {
     default: [],
-    type: [ String ]
+    type: [String]
   },
   tipoDeMentoria: {
     require: true,
-    type: [ String ]
+    type: [String]
   },
   contato: {
       twitter: String,
@@ -30,8 +29,8 @@ const MentoreSchema = Schema({
   }
 })
 
-const Mentore = mongoose.model('mentore', MentoreSchema, 'mentorus')
-
-module.exports = {
-  Mentore
-}
+/**
+ * Isso evita dar erro no mongoose quando o next recompilar
+ * https://stackoverflow.com/a/61433500
+ */
+export default mongoose.models['Mentore'] || mongoose.model('Mentore', MentoreSchema)
