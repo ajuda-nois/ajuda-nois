@@ -1,14 +1,13 @@
 import Head from 'next/head'
-import axios from 'axios'
 
-function Home({ mentorus }) {
+function Home() {
   return (
     <div>
       <Head>
         <title>Ajuda nois</title>
-      </Head>]
+      </Head>
 
-      {JSON.stringify(mentorus, null, 2)}
+      <span>AJudaNois</span>
 
       <style jsx global>{`
         html,
@@ -26,17 +25,6 @@ function Home({ mentorus }) {
       `}</style>
     </div>
   )
-}
-
-Home.getInitialProps = async () => {
-  const response = await axios({
-    method: 'GET',
-    url: 'http://localhost:3000/api/mentorus'
-  })
-
-  return {
-    mentorus: response.data
-  }
 }
 
 export default Home
