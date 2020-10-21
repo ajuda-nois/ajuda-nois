@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server-micro'
+import { connect as ConnectDatabase } from './database'
 
 const typeDefs = gql`
   type Persons {
@@ -17,6 +18,8 @@ const resolvers = {
     }
   },
 }
+
+ConnectDatabase(process.env)
 
 const apolloServer = new ApolloServer({
   typeDefs,
